@@ -27,7 +27,7 @@ public class Hand : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            hand.AddForce(Vector3.up * force, ForceMode2D.Force);
+            hand.AddForce(Vector3.up * force, ForceMode2D.Impulse);
         }
     }
     

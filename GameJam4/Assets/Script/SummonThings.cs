@@ -13,8 +13,28 @@ public class SummonThings : MonoBehaviour
     public int spawncount;
     public float spawnBtwn;
 
+    public bool pressGo;
+
     // Start is called before the first frame update
     void Start()
+    {
+        pressGo = false;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (pressGo)
+        {
+            Summon();
+            pressGo = false;
+
+        }
+        
+    }
+
+    void Summon()
     {
         List<Transform> usedFallPosition = new List<Transform>();
 
@@ -37,12 +57,6 @@ public class SummonThings : MonoBehaviour
             usedFallPosition.Add(fallPos);
 
         }
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

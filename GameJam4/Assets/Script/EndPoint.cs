@@ -10,7 +10,7 @@ public class EndPoint : MonoBehaviour
     public int EndScore;
     public GameObject replay;
 
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI textM;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class EndPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = EndScore.ToString();
+        textM.text = EndScore.ToString();
 
         if (EndScore >= 6)
         {
